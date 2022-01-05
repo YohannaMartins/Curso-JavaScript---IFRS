@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Eventos de input</title>
+        <script src="input.js"></script>
+    </head>
+    <body>
+    <h1>Eventos de input</h1>
+    <form name="formTeste" onSubmit="return submeti()" onReset="resetei()">
+        <label for="nome">Nome:</label> <input type="text" id="nome" name="nome" onBlur="saiDoCampo()" onChange="selecionei()" onKeyDown="teclaBaixo()" onKeyUp="teclaCima()"> <br>
+        <button type="sumit">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+    <br>
+    <h2>Log de ocorrências</h2>
+    <div id="log"></div>
+    </body>
+</html>
+<!-- função submit: precisa colocar return ao chamar a função, pois deve ser verificado se todos os campos foram preenchidos corretamente quando o formulário é enviado-->
